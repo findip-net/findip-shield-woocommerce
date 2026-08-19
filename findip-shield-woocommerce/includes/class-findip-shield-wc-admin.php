@@ -101,7 +101,7 @@ final class FindIP_Shield_WC_Admin {
 			return;
 		}
 
-		$settings   = FindIP_Shield_WC_Plugin::settings();
+		$settings    = FindIP_Shield_WC_Plugin::settings();
 		$option_name = FindIP_Shield_WC_Plugin::OPTION_NAME;
 		?>
 		<div class="wrap">
@@ -178,4 +178,3 @@ final class FindIP_Shield_WC_Admin {
 		<?php
 	}
 }
-

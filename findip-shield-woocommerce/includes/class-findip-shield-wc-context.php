@@ -8,7 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 /**
  * Declares compatibility and exposes non-sensitive storefront context.
  */
@@ -57,4 +56,3 @@ final class FindIP_Shield_WC_Context {
 		return '';
 	}
 }
-

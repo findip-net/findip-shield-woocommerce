@@ -28,10 +28,9 @@ final class FindIP_Shield_WC_Privacy {
 			return;
 		}
 
-		$content = '<p>' . esc_html__( 'This store uses FindIP Shield to receive network and visitor-risk signals for storefront activity. Depending on the configured privacy and consent modes, the service receives the visitor IP address from the network connection and limited technical event metadata. The integration does not send names, email addresses, postal addresses, product identifiers, cart contents, order information, form values, or payment details.', 'findip-shield-woocommerce' ) . '</p>';
+		$content  = '<p>' . esc_html__( 'This store uses FindIP Shield to receive network and visitor-risk signals for storefront activity. Depending on the configured privacy and consent modes, the service receives the visitor IP address from the network connection and limited technical event metadata. The integration does not send names, email addresses, postal addresses, product identifiers, cart contents, order information, form values, or payment details.', 'findip-shield-woocommerce' ) . '</p>';
 		$content .= '<p>' . wp_kses_post( __( 'Learn more in the <a href="https://www.findip.net/docs/shield/data-collection">FindIP Shield data-collection documentation</a> and <a href="https://www.findip.net/Docs/privacy-policy">FindIP privacy policy</a>.', 'findip-shield-woocommerce' ) ) . '</p>';
 
 		wp_add_privacy_policy_content( 'FindIP Shield for WooCommerce', wp_kses_post( $content ) );
 	}
 }
-

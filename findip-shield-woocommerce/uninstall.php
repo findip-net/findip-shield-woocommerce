@@ -10,4 +10,3 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option( 'findip_shield_woocommerce_settings' );
-
