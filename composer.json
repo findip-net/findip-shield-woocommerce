@@ -1,0 +1,29 @@
+{
+  "name": "findip-net/findip-shield-woocommerce",
+  "description": "Official FindIP Shield integration for WooCommerce",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "FindIP",
+      "email": "info@findip.net",
+      "homepage": "https://www.findip.net/"
+    }
+  ],
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "squizlabs/php_codesniffer": "^3.13",
+    "wp-coding-standards/wpcs": "^3.2"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "lint": "phpcs --standard=phpcs.xml.dist"
+  }
+}
+

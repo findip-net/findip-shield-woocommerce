@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: composer:v2
+          coverage: none
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: composer install --no-interaction --prefer-dist
+      - run: find findip-shield-woocommerce -name '*.php' -print0 | xargs -0 -n1 php -l
+      - run: composer lint
+      - run: npm test
+      - name: WordPress Plugin Check
+        uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: './findip-shield-woocommerce'
+          wp-version: 'latest'
+
