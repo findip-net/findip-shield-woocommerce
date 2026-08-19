@@ -56,12 +56,12 @@ final class FindIP_Shield_WC_Plugin {
 	 */
 	public static function default_settings() {
 		return array(
-			'site_key'               => '',
-			'privacy_mode'           => 'strict',
-			'auto_track'             => true,
-			'auto_detect_forms'      => true,
-			'consent_required'       => true,
-			'no_consent_mode'        => 'strict',
+			'site_key'              => '',
+			'privacy_mode'          => 'strict',
+			'auto_track'            => true,
+			'auto_detect_forms'     => true,
+			'consent_required'      => true,
+			'no_consent_mode'       => 'strict',
 			'track_product_views'   => true,
 			'track_cart_events'     => true,
 			'track_checkout_events' => true,
