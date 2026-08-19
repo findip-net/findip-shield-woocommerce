@@ -35,5 +35,4 @@ Before submission:
 5. Inspect all browser requests in every privacy and consent mode.
 6. Confirm public privacy, terms, documentation, and support pages.
 7. Prepare a reviewer account, test site, setup instructions, screenshots, and a short demo video.
-8. Build the ZIP from `findip-shield-woocommerce/` only.
-
+8. Build the ZIP from `findip-shield-for-woocommerce/` only.

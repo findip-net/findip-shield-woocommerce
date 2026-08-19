@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="FindIP Shield for WooCommerce">
 	<description>WordPress and PHP compatibility rules for the WooCommerce integration.</description>
-	<file>findip-shield-woocommerce</file>
+	<file>findip-shield-for-woocommerce</file>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<arg name="extensions" value="php"/>
 	<arg value="sp"/>
@@ -9,7 +9,7 @@
 	<rule ref="WordPress.WP.I18n">
 		<properties>
 			<property name="text_domain" type="array">
-				<element value="findip-shield-woocommerce"/>
+				<element value="findip-shield-for-woocommerce"/>
 			</property>
 		</properties>
 	</rule>

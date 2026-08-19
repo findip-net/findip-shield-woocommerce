@@ -4,7 +4,7 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 const bridgeSource = readFileSync(
-  new URL('../../findip-shield-woocommerce/assets/js/findip-shield-woocommerce.js', import.meta.url),
+  new URL('../../findip-shield-for-woocommerce/assets/js/findip-shield-for-woocommerce.js', import.meta.url),
   'utf8'
 );
 

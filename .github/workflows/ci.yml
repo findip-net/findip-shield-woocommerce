@@ -22,12 +22,12 @@ jobs:
         with:
           node-version: 22
       - run: composer install --no-interaction --prefer-dist
-      - run: find findip-shield-woocommerce -name '*.php' -print0 | xargs -0 -n1 php -l
+      - run: find findip-shield-for-woocommerce -name '*.php' -print0 | xargs -0 -n1 php -l
       - run: composer lint
       - run: npm test
       - name: WordPress Plugin Check
         uses: wordpress/plugin-check-action@v1
         with:
-          build-dir: './findip-shield-woocommerce'
+          build-dir: './findip-shield-for-woocommerce'
           wp-version: 'latest'
 

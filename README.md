@@ -2,7 +2,7 @@
 
 Official WooCommerce integration for [FindIP Shield](https://www.findip.net/shield/overview), maintained by FindIP at [info@findip.net](mailto:info@findip.net).
 
-The installable plugin is in [`findip-shield-woocommerce/`](findip-shield-woocommerce/). It adds consent-aware visitor risk signals to WooCommerce storefront activity without transmitting customer, product, cart, order, or payment identifiers.
+The installable plugin is in [`findip-shield-for-woocommerce/`](findip-shield-for-woocommerce/). It adds consent-aware visitor risk signals to WooCommerce storefront activity without transmitting customer, product, cart, order, or payment identifiers.
 
 ## Tracked storefront context
 
@@ -19,7 +19,7 @@ Version `0.1.0` is the initial marketplace MVP. It supports classic WooCommerce 
 
 ## Local test
 
-1. Copy `findip-shield-woocommerce/` to `wp-content/plugins/findip-shield-woocommerce/`.
+1. Copy `findip-shield-for-woocommerce/` to `wp-content/plugins/findip-shield-for-woocommerce/`.
 2. Install and activate WooCommerce.
 3. Activate **FindIP Shield for WooCommerce**.
 4. Configure it under **WooCommerce → FindIP Shield**.
@@ -32,7 +32,7 @@ Version `0.1.0` is the initial marketplace MVP. It supports classic WooCommerce 
 composer install
 composer lint
 npm test
-find findip-shield-woocommerce -name '*.php' -print0 | xargs -0 -n1 php -l
+find findip-shield-for-woocommerce -name '*.php' -print0 | xargs -0 -n1 php -l
 ```
 
 ## Support

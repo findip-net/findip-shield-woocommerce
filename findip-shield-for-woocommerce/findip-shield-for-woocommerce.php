@@ -11,8 +11,7 @@
  * Author URI:        https://www.findip.net/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       findip-shield-woocommerce
- * Update URI:        https://github.com/findip-net/findip-shield-woocommerce
+ * Text Domain:       findip-shield-for-woocommerce
  * WC requires at least: 8.2
  * WC tested up to:   11.0
  *
@@ -38,7 +37,7 @@ new FindIP_Shield_WC_Context();
 function findip_shield_wc_companion_notice() {
 	?>
 	<div class="notice notice-warning">
-		<p><?php echo esc_html__( 'FindIP Shield already includes WooCommerce support. Deactivate either FindIP Shield or FindIP Shield for WooCommerce to prevent duplicate events.', 'findip-shield-woocommerce' ); ?></p>
+		<p><?php echo esc_html__( 'FindIP Shield already includes WooCommerce support. Deactivate either FindIP Shield or FindIP Shield for WooCommerce to prevent duplicate events.', 'findip-shield-for-woocommerce' ); ?></p>
 	</div>
 	<?php
 }
@@ -49,7 +48,7 @@ function findip_shield_wc_companion_notice() {
 function findip_shield_wc_dependency_notice() {
 	?>
 	<div class="notice notice-error">
-		<p><?php echo esc_html__( 'FindIP Shield for WooCommerce requires WooCommerce to be installed and active.', 'findip-shield-woocommerce' ); ?></p>
+		<p><?php echo esc_html__( 'FindIP Shield for WooCommerce requires WooCommerce to be installed and active.', 'findip-shield-for-woocommerce' ); ?></p>
 	</div>
 	<?php
 }

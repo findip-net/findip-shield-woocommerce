@@ -109,15 +109,15 @@ final class FindIP_Shield_WC_Plugin {
 		);
 
 		wp_enqueue_script(
-			'findip-shield-woocommerce',
-			FINDIP_SHIELD_WC_URL . 'assets/js/findip-shield-woocommerce.js',
+			'findip-shield-for-woocommerce',
+			FINDIP_SHIELD_WC_URL . 'assets/js/findip-shield-for-woocommerce.js',
 			array( 'findip-shield-wc-sdk' ),
 			FINDIP_SHIELD_WC_VERSION,
 			true
 		);
 
 		wp_localize_script(
-			'findip-shield-woocommerce',
+			'findip-shield-for-woocommerce',
 			'findipShieldWooCommerceSettings',
 			array(
 				'siteKey'             => $site_key,
@@ -164,8 +164,8 @@ final class FindIP_Shield_WC_Plugin {
 	public function add_settings_link( $links ) {
 		array_unshift(
 			$links,
-			'<a href="' . esc_url( admin_url( 'admin.php?page=findip-shield-woocommerce' ) ) . '">' .
-			esc_html__( 'Configure', 'findip-shield-woocommerce' ) .
+			'<a href="' . esc_url( admin_url( 'admin.php?page=findip-shield-for-woocommerce' ) ) . '">' .
+			esc_html__( 'Configure', 'findip-shield-for-woocommerce' ) .
 			'</a>'
 		);
 
