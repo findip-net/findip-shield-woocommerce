@@ -3,7 +3,28 @@
 
   var settings = window.findipShieldWooCommerceSettings || {};
   var shield = window.FindIP;
-  var consentGranted = settings.consentRequired !== true;
+
+  // wp_localize_script casts booleans to strings ("1" / ""), so every flag
+  // must be normalized before comparison.
+  function flag(value, fallback) {
+    if (value === true || value === '1' || value === 1) {
+      return true;
+    }
+
+    if (value === false || value === '' || value === '0' || value === 0) {
+      return false;
+    }
+
+    return fallback;
+  }
+
+  var consentRequired = flag(settings.consentRequired, false);
+  var autoTrack = flag(settings.autoTrack, true);
+  var autoDetectForms = flag(settings.autoDetectForms, true);
+  var trackProductViews = flag(settings.trackProductViews, true);
+  var trackCartEvents = flag(settings.trackCartEvents, true);
+  var trackCheckoutEvents = flag(settings.trackCheckoutEvents, true);
+  var consentGranted = !consentRequired;
   var pageEventSent = false;
   var lastCartSignal = '';
   var lastCartSignalAt = 0;
@@ -12,16 +33,16 @@
     return;
   }
 
-  if (settings.consentRequired === true) {
+  if (consentRequired) {
     shield.setConsent(false);
   }
 
   shield.init({
     siteKey: settings.siteKey,
     privacyMode: settings.privacyMode || 'strict',
-    autoTrack: settings.autoTrack !== false,
-    autoDetectForms: settings.autoDetectForms !== false,
-    consentRequired: settings.consentRequired === true,
+    autoTrack: autoTrack,
+    autoDetectForms: autoDetectForms,
+    consentRequired: consentRequired,
     noConsentMode: settings.noConsentMode || 'strict',
     integration: settings.integration || 'woocommerce',
     pushToDataLayer: true
@@ -29,7 +50,7 @@
 
   function canTrack() {
     return (
-      settings.consentRequired !== true ||
+      !consentRequired ||
       consentGranted ||
       settings.noConsentMode !== 'disabled'
     );
@@ -64,18 +85,18 @@
 
   function pageEventEnabled(eventType) {
     if (eventType === 'product_view') {
-      return settings.trackProductViews !== false;
+      return trackProductViews;
     }
 
     if (eventType === 'cart_view') {
-      return settings.trackCartEvents !== false;
+      return trackCartEvents;
     }
 
     if (
       eventType === 'checkout_view' ||
       eventType === 'order_received'
     ) {
-      return settings.trackCheckoutEvents !== false;
+      return trackCheckoutEvents;
     }
 
     return false;
@@ -99,7 +120,7 @@
     var now = Date.now();
     var signal = 'cart_updated:' + action;
 
-    if (settings.trackCartEvents === false || !canTrack()) {
+    if (!trackCartEvents || !canTrack()) {
       return;
     }
 
@@ -135,7 +156,7 @@
         trackCartSignal('item_removed');
       })
       .on('checkout_error', function () {
-        if (settings.trackCheckoutEvents !== false) {
+        if (trackCheckoutEvents) {
           safeTrack('payment_failed', 'checkout_failed');
         }
       });
@@ -151,4 +172,3 @@
     });
   }
 })();
-

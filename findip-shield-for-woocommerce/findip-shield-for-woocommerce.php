@@ -3,7 +3,7 @@
  * Plugin Name:       FindIP Shield for WooCommerce
  * Plugin URI:        https://www.findip.net/shield/overview
  * Description:       Adds privacy-conscious visitor risk signals to WooCommerce without collecting customer, cart, order, or payment data.
- * Version:           0.1.1
+ * Version:           0.1.2
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Requires Plugins:  woocommerce
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'FINDIP_SHIELD_WC_VERSION', '0.1.1' );
+define( 'FINDIP_SHIELD_WC_VERSION', '0.1.2' );
 define( 'FINDIP_SHIELD_WC_FILE', __FILE__ );
 define( 'FINDIP_SHIELD_WC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FINDIP_SHIELD_WC_URL', plugin_dir_url( __FILE__ ) );

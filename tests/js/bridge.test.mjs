@@ -55,7 +55,7 @@ function createHarness(overrides = {}) {
     }
   };
 
-  const settings = {
+  const configured = {
     siteKey: 'pub_0123456789abcdef',
     privacyMode: 'strict',
     autoTrack: true,
@@ -68,6 +68,15 @@ function createHarness(overrides = {}) {
     trackCheckoutEvents: true,
     ...overrides
   };
+
+  // wp_localize_script casts every scalar to a string (true -> "1",
+  // false -> "") — the bridge must consume that shape, not real booleans.
+  const settings = Object.fromEntries(
+    Object.entries(configured).map(([key, value]) => [
+      key,
+      value === true ? '1' : value === false ? '' : value
+    ])
+  );
 
   const window = {
     FindIP: shield,

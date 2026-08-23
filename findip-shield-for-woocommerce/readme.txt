@@ -7,7 +7,7 @@ Requires PHP: 7.4
 Requires Plugins: woocommerce
 WC requires at least: 8.2
 WC tested up to: 11.0
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,10 @@ No. The general plugin already includes WooCommerce support. Keep only one FindI
 Email info@findip.net. Report security issues privately to security@findip.net.
 
 == Changelog ==
+
+= 0.1.2 =
+
+* Normalize localized boolean settings so consent gating and event-category toggles work; WordPress localizes booleans as strings, which previously left consent-required mode sending events before consent and made admin toggles ineffective.
 
 = 0.1.1 =
 
