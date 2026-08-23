@@ -3,3 +3,5 @@
 /.phpcs-cache
 /.DS_Store
 
+
+dist/
