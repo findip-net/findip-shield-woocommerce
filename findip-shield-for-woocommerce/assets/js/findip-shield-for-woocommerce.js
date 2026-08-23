@@ -23,6 +23,7 @@
     autoDetectForms: settings.autoDetectForms !== false,
     consentRequired: settings.consentRequired === true,
     noConsentMode: settings.noConsentMode || 'strict',
+    integration: settings.integration || 'woocommerce',
     pushToDataLayer: true
   });
 
