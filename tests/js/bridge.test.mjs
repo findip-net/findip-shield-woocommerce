@@ -108,6 +108,7 @@ test('initializes the SDK with privacy and consent settings', () => {
     autoDetectForms: true,
     consentRequired: false,
     noConsentMode: 'strict',
+    integration: 'woocommerce',
     pushToDataLayer: true
   });
 });
