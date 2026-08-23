@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class FindIP_Shield_WC_Plugin {
 	const OPTION_NAME = 'findip_shield_woocommerce_settings';
-	const SDK_VERSION = '1.0.5';
-	const SDK_SRI     = 'sha384-rwISMrRaCS6RMzWGm8J3VimsKtyhHuJwOc+ZmUYZPyynHyU5kICyoXXQsYlTp/5e';
+	const SDK_VERSION = '1.0.8';
+	const SDK_SRI     = 'sha384-aJa5dlL7hwJ6DtWQEKKDt6ScyoyaUwd9tayFZod2uWxGU4/s2dGMqzmGa8MWkdAr';
 
 	/**
 	 * Singleton instance.
@@ -126,6 +126,7 @@ final class FindIP_Shield_WC_Plugin {
 				'autoDetectForms'     => (bool) $settings['auto_detect_forms'],
 				'consentRequired'     => (bool) $settings['consent_required'],
 				'noConsentMode'       => $settings['no_consent_mode'],
+				'integration'         => 'woocommerce',
 				'pageEvent'           => FindIP_Shield_WC_Context::get_page_event(),
 				'trackProductViews'   => (bool) $settings['track_product_views'],
 				'trackCartEvents'     => (bool) $settings['track_cart_events'],

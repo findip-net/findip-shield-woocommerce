@@ -7,7 +7,7 @@ Requires PHP: 7.4
 Requires Plugins: woocommerce
 WC requires at least: 8.2
 WC tested up to: 11.0
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,11 @@ No. The general plugin already includes WooCommerce support. Keep only one FindI
 Email info@findip.net. Report security issues privately to security@findip.net.
 
 == Changelog ==
+
+= 0.1.1 =
+
+* Pin FindIP Shield SDK 1.0.8 with the one-session-start fix and correct integration attribution.
+* Report events under the woocommerce integration instead of Google Tag Manager.
 
 = 0.1.0 =
 
