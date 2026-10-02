@@ -4,6 +4,14 @@ Official WooCommerce integration for [FindIP Shield](https://www.findip.net/shie
 
 The installable plugin is in [`findip-shield-for-woocommerce/`](findip-shield-for-woocommerce/). It adds consent-aware visitor risk signals to WooCommerce storefront activity without transmitting customer, product, cart, order, or payment identifiers.
 
+## See Shield in action
+
+[![A sample sign-up arrives through a VPN. FindIP Shield shows the reasons behind its risk score, follows the session across networks, and records what the page did](.github/media/shield-signup-insight-teaser.gif)](https://www.findip.net/assets/videos/shield-signup-insight.mp4)
+
+▶ **[Watch with sound (0:30)](https://www.findip.net/assets/videos/shield-signup-insight.mp4)** · [Try the interactive demo](https://www.findip.net/shield/demo?utm_source=github&utm_medium=readme&utm_campaign=shield_clips&utm_content=findip-shield-woocommerce) · [Explore FindIP Shield](https://www.findip.net/shield/overview?utm_source=github&utm_medium=readme&utm_campaign=shield_clips&utm_content=findip-shield-woocommerce)
+
+This is the Shield dashboard that the extension reports to, shown with sample data: each visit with its risk score, the reasons behind it, and a recommendation. The extension reports signals; it does not block shoppers.
+
 ## Tracked storefront context
 
 - Product, cart, checkout, and order-received page types
